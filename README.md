@@ -1,6 +1,7 @@
 # banai_delayed_displays
 
-You can delay the display of widgets with gradient and offset animations. When your widgets are very performance-intensive and cause routing jumps to freeze, you can also pass in a placeholder to improve performance.
+You can delay the display of widgets with gradient and offset animations. 
+When your widgets are very performance-intensive and cause routing jumps to freeze, you can also pass in a placeholder to improve performance.
 
 ## How to cancel animation redrawing in listview
 

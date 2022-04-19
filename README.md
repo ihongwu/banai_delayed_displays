@@ -4,7 +4,7 @@ You can delay the display of widgets with gradient and offset animations. When y
 
 
 ## Preview
-![preview](https://user-images.githubusercontent.com/21274377/163922823-1c10446f-3fc2-41ed-93dd-727152d645bd.gif)
+![preview](https://raw.githubusercontent.com/ihongwu/banai_delayed_displays/main/documentation/preview.gif)
 
 
 ## Super simple to use

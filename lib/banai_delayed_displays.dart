@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+List keys = [];
 class BanaiDelayedDisplays extends StatefulWidget {
   /// Child that will be displayed with the animation and delay
   final Widget child;
@@ -31,7 +31,6 @@ class BanaiDelayedDisplays extends StatefulWidget {
     this.curve = Curves.decelerate, 
     this.from = const Offset(0, 0),
     this.fadeIn = true}) : super(key: key);
-
   @override
   State<BanaiDelayedDisplays> createState() => _BanaiDelayedDisplaysState();
 }
@@ -50,15 +49,28 @@ class _BanaiDelayedDisplaysState extends State<BanaiDelayedDisplays> with Ticker
   /// Sliding Animation offset
   late Animation<Offset> _slideAnimationOffset;
 
+  late Duration delay;
+
   /// Timer used to delayed animation
   Timer ? _timer;
+
   @override
   void initState() {
     super.initState();
 
+    delay = widget.delay;
+    var key = widget.key;
+
+    bool isanimate = true;
+    
+    if(keys.contains(key.toString())) {
+      isanimate = false;
+      delay = Duration.zero;
+    }
+
     _opacityController = AnimationController(
       vsync: this,
-      duration: widget.duration,
+      duration: isanimate ? widget.duration : Duration.zero,
     );
 
     final CurvedAnimation curvedAnimation = CurvedAnimation(
@@ -70,7 +82,13 @@ class _BanaiDelayedDisplaysState extends State<BanaiDelayedDisplays> with Ticker
       begin: widget.from,
       end: Offset.zero,
     ).animate(curvedAnimation);
-
+    
+    if(key != null) {
+      if(!keys.contains(key.toString())) {
+        keys.add(key.toString());
+      }
+    }
+    
     _runFadeAnimation();
   }
 
@@ -99,7 +117,7 @@ class _BanaiDelayedDisplaysState extends State<BanaiDelayedDisplays> with Ticker
 
 
   void _runFadeAnimation() {
-    _timer = Timer(widget.delay, () {
+    _timer = Timer(delay, () {
       result = widget.child;
       showChild = true;
       setState(() {});
@@ -118,11 +136,11 @@ class _BanaiDelayedDisplaysState extends State<BanaiDelayedDisplays> with Ticker
   @override
   Widget build(BuildContext context) {
     return showChild || widget.placelholder == null ? FadeTransition(
-      opacity: _opacityController,
-      child: SlideTransition(
-        position: _slideAnimationOffset,
-        child: widget.child,
-      ),
-    ) : widget.placelholder!;
+        opacity: _opacityController,
+        child: SlideTransition(
+          position: _slideAnimationOffset,
+          child: widget.child,
+        ),
+      ) : widget.placelholder!;
   }
 }

@@ -2,6 +2,24 @@
 
 You can delay the display of widgets with gradient and offset animations. When your widgets are very performance-intensive and cause routing jumps to freeze, you can also pass in a placeholder to improve performance.
 
+## How to cancel animation redrawing in listview
+
+When using components, just pass in a unique key, for example:
+```
+const BanaiDelayedDisplays(
+	key: Key('1'),  // add unique key
+	fadeIn: true,
+	from: Offset(0, 0.35),
+	delay: Duration(milliseconds: 300),
+	duration: Duration(milliseconds: 500),
+	placelholder: Text(''),
+	child: Center(
+		child: Text('delayed_displays_example'),
+	),
+),
+```
+
+
 
 ## Preview
 ![preview](https://raw.githubusercontent.com/ihongwu/banai_delayed_displays/main/documentation/preview.gif)

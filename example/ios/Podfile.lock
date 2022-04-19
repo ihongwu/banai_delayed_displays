@@ -1,0 +1,22 @@
+PODS:
+  - banai_delayed_displays (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - banai_delayed_displays (from `.symlinks/plugins/banai_delayed_displays/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  banai_delayed_displays:
+    :path: ".symlinks/plugins/banai_delayed_displays/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  banai_delayed_displays: bb6df145a0801e71b29ce7c2d392c98b622e0c7d
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.11.3

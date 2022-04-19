@@ -27,35 +27,120 @@ class _MyAppState extends State<MyApp> {
         backgroundColor: Colors.pinkAccent,
         body: SizedBox(
           width: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: ListView(
             children:  [
               
               const BanaiDelayedDisplays(
+                key: Key('1'),
                 fadeIn: true,
                 from: Offset(0, 0.35),
                 delay: Duration(milliseconds: 300),
                 duration: Duration(milliseconds: 500),
                 placelholder: Text(''),
-                child: Text('delayed_displays_example'),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
               ),
 
               BanaiDelayedDisplays(
+                key: const Key('2'),
                 fadeIn: true,
                 from: const Offset(0, 0.35),
                 delay: const Duration(milliseconds: 600),
                 duration: const Duration(milliseconds: 500),
-                placelholder: Container(
-                  width: 200,
-                  height: 50,
-                  color: Colors.transparent,
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
                 ),
-                child: Container(
-                  width: 200,
-                  height: 50,
-                  color: Colors.blue,
-                  child: const Text('delayed_displays_example'),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Center(
+                      child: Text('delayed_displays_example'),
+                    ),
+                  ),
+                ),
+              ),
+
+
+              Container(
+                height: 100,
+              ),
+
+              const BanaiDelayedDisplays(
+                key: Key('3'),
+                fadeIn: true,
+                from: Offset(0.35, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                key: const Key('4'),
+                fadeIn: true,
+                from: const Offset(-0.35, 0.35),
+                delay: const Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Text('delayed_displays_example'),
+                  ),
+                ),
+              ),
+
+              const BanaiDelayedDisplays(
+                key: Key('6'),
+                fadeIn: true,
+                from: Offset(0, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                key: const Key('7'),
+                fadeIn: true,
+                from: const Offset(0, 0.35),
+                delay: const Duration(milliseconds: 600),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Center(
+                      child: Text('delayed_displays_example'),
+                    ),
+                  ),
                 ),
               ),
 
@@ -70,7 +155,9 @@ class _MyAppState extends State<MyApp> {
                 delay: Duration(milliseconds: 300),
                 duration: Duration(milliseconds: 500),
                 placelholder: Text(''),
-                child: Text('delayed_displays_example'),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
               ),
 
               BanaiDelayedDisplays(
@@ -78,16 +165,385 @@ class _MyAppState extends State<MyApp> {
                 from: const Offset(-0.35, 0.35),
                 delay: const Duration(milliseconds: 300),
                 duration: const Duration(milliseconds: 500),
-                placelholder: Container(
-                  width: 200,
-                  height: 50,
-                  color: Colors.transparent,
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
                 ),
-                child: Container(
-                  width: 200,
-                  height: 50,
-                  color: Colors.blue,
-                  child: const Text('delayed_displays_example'),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Text('delayed_displays_example'),
+                  ),
+                ),
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(0, 0.35),
+                delay: const Duration(milliseconds: 600),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Center(
+                      child: Text('delayed_displays_example'),
+                    ),
+                  ),
+                ),
+              ),
+
+
+              Container(
+                height: 100,
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0.35, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(-0.35, 0.35),
+                delay: const Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Text('delayed_displays_example'),
+                  ),
+                ),
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(0, 0.35),
+                delay: const Duration(milliseconds: 600),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Center(
+                      child: Text('delayed_displays_example'),
+                    ),
+                  ),
+                ),
+              ),
+
+
+              Container(
+                height: 100,
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0.35, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(-0.35, 0.35),
+                delay: const Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Text('delayed_displays_example'),
+                  ),
+                ),
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(0, 0.35),
+                delay: const Duration(milliseconds: 600),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Center(
+                      child: Text('delayed_displays_example'),
+                    ),
+                  ),
+                ),
+              ),
+
+
+              Container(
+                height: 100,
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0.35, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(-0.35, 0.35),
+                delay: const Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Text('delayed_displays_example'),
+                  ),
+                ),
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(0, 0.35),
+                delay: const Duration(milliseconds: 600),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Center(
+                      child: Text('delayed_displays_example'),
+                    ),
+                  ),
+                ),
+              ),
+
+
+              Container(
+                height: 100,
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0.35, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(-0.35, 0.35),
+                delay: const Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Text('delayed_displays_example'),
+                  ),
+                ),
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(0, 0.35),
+                delay: const Duration(milliseconds: 600),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Center(
+                      child: Text('delayed_displays_example'),
+                    ),
+                  ),
+                ),
+              ),
+
+
+              Container(
+                height: 100,
+              ),
+
+              const BanaiDelayedDisplays(
+                fadeIn: true,
+                from: Offset(0.35, 0.35),
+                delay: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 500),
+                placelholder: Text(''),
+                child: Center(
+                  child: Text('delayed_displays_example'),
+                ),
+              ),
+
+              BanaiDelayedDisplays(
+                fadeIn: true,
+                from: const Offset(-0.35, 0.35),
+                delay: const Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 500),
+                placelholder: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.transparent,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Text('delayed_displays_example'),
+                  ),
                 ),
               ),
             ],

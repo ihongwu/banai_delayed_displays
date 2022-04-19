@@ -13,10 +13,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
+  final BanaiDelayedDisplaysController _banaiDelayedDisplaysController = BanaiDelayedDisplaysController();
   @override
   void initState() {
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _banaiDelayedDisplaysController.dispose();
   }
   
 
@@ -30,7 +36,8 @@ class _MyAppState extends State<MyApp> {
           child: ListView(
             children:  [
               
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 key: Key('1'),
                 fadeIn: true,
                 from: Offset(0, 0.35),
@@ -42,29 +49,35 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
 
-              BanaiDelayedDisplays(
-                key: const Key('2'),
-                fadeIn: true,
-                from: const Offset(0, 0.35),
-                delay: const Duration(milliseconds: 600),
-                duration: const Duration(milliseconds: 500),
-                placelholder: Center(
-                  child: Container(
-                    width: 200,
-                    height: 50,
-                    color: Colors.transparent,
+              GestureDetector(
+                child: BanaiDelayedDisplays(
+                  banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
+                  key: const Key('2'),
+                  fadeIn: true,
+                  from: const Offset(0, 0.35),
+                  delay: const Duration(milliseconds: 600),
+                  duration: const Duration(milliseconds: 500),
+                  placelholder: Center(
+                    child: Container(
+                      width: 200,
+                      height: 50,
+                      color: Colors.transparent,
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Container(
-                    width: 200,
-                    height: 50,
-                    color: Colors.blue,
-                    child: const Center(
-                      child: Text('delayed_displays_example'),
+                  child: Center(
+                    child: Container(
+                      width: 200,
+                      height: 50,
+                      color: Colors.blue,
+                      child: const Center(
+                        child: Text('delayed_displays_example'),
+                      ),
                     ),
                   ),
                 ),
+                onTap: (){
+                  _banaiDelayedDisplaysController.dispose();
+                },
               ),
 
 
@@ -72,7 +85,8 @@ class _MyAppState extends State<MyApp> {
                 height: 100,
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 key: Key('3'),
                 fadeIn: true,
                 from: Offset(0.35, 0.35),
@@ -85,6 +99,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 key: const Key('4'),
                 fadeIn: true,
                 from: const Offset(-0.35, 0.35),
@@ -107,7 +122,8 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 key: Key('6'),
                 fadeIn: true,
                 from: Offset(0, 0.35),
@@ -120,6 +136,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 key: const Key('7'),
                 fadeIn: true,
                 from: const Offset(0, 0.35),
@@ -149,7 +166,8 @@ class _MyAppState extends State<MyApp> {
                 height: 100,
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0.35, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -161,6 +179,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(-0.35, 0.35),
                 delay: const Duration(milliseconds: 300),
@@ -182,7 +201,8 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -194,6 +214,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(0, 0.35),
                 delay: const Duration(milliseconds: 600),
@@ -222,7 +243,8 @@ class _MyAppState extends State<MyApp> {
                 height: 100,
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0.35, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -234,6 +256,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(-0.35, 0.35),
                 delay: const Duration(milliseconds: 300),
@@ -255,7 +278,8 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -267,6 +291,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(0, 0.35),
                 delay: const Duration(milliseconds: 600),
@@ -295,7 +320,8 @@ class _MyAppState extends State<MyApp> {
                 height: 100,
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0.35, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -307,6 +333,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(-0.35, 0.35),
                 delay: const Duration(milliseconds: 300),
@@ -328,7 +355,8 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -340,6 +368,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(0, 0.35),
                 delay: const Duration(milliseconds: 600),
@@ -368,7 +397,8 @@ class _MyAppState extends State<MyApp> {
                 height: 100,
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0.35, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -380,6 +410,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(-0.35, 0.35),
                 delay: const Duration(milliseconds: 300),
@@ -401,7 +432,8 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -413,6 +445,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(0, 0.35),
                 delay: const Duration(milliseconds: 600),
@@ -441,7 +474,8 @@ class _MyAppState extends State<MyApp> {
                 height: 100,
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0.35, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -453,6 +487,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(-0.35, 0.35),
                 delay: const Duration(milliseconds: 300),
@@ -474,7 +509,8 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -486,6 +522,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(0, 0.35),
                 delay: const Duration(milliseconds: 600),
@@ -514,7 +551,8 @@ class _MyAppState extends State<MyApp> {
                 height: 100,
               ),
 
-              const BanaiDelayedDisplays(
+              BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: Offset(0.35, 0.35),
                 delay: Duration(milliseconds: 300),
@@ -526,6 +564,7 @@ class _MyAppState extends State<MyApp> {
               ),
 
               BanaiDelayedDisplays(
+                banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
                 fadeIn: true,
                 from: const Offset(-0.35, 0.35),
                 delay: const Duration(milliseconds: 300),

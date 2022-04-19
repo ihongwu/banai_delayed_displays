@@ -1,6 +1,6 @@
 name: banai_delayed_displays
 description: You can delay the display of widgets with gradient and offset animations. When your widgets are very performance-intensive and cause routing jumps to freeze, you can also pass in a placeholder to improve performance.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/ihongwu/banai_delayed_displays
 
 environment:

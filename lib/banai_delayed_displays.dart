@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-List keys = [];
+// List keys = [];
 class BanaiDelayedDisplays extends StatefulWidget {
   /// Child that will be displayed with the animation and delay
   final Widget child;
@@ -22,9 +22,13 @@ class BanaiDelayedDisplays extends StatefulWidget {
 
   /// If true, make the child appear, disappear otherwise. Default to true.
   final bool fadeIn;
+
+  // _banaiDelayedDisplaysController
+  final BanaiDelayedDisplaysController banaiDelayedDisplaysController;
   const BanaiDelayedDisplays(
     {Key? key,
     required this.child, 
+    required this.banaiDelayedDisplaysController,
     this.placelholder,
     this.delay = const Duration(milliseconds: 420), 
     this.duration = const Duration(milliseconds: 600), 
@@ -54,9 +58,12 @@ class _BanaiDelayedDisplaysState extends State<BanaiDelayedDisplays> with Ticker
   /// Timer used to delayed animation
   Timer ? _timer;
 
+
   @override
   void initState() {
     super.initState();
+
+    List keys = widget.banaiDelayedDisplaysController.getKeysList();
 
     delay = widget.delay;
     var key = widget.key;
@@ -142,5 +149,21 @@ class _BanaiDelayedDisplaysState extends State<BanaiDelayedDisplays> with Ticker
           child: widget.child,
         ),
       ) : widget.placelholder!;
+  }
+}
+
+
+class BanaiDelayedDisplaysController {
+  List<String> keys = [];
+  List<String> getKeysList(){
+    return keys;
+  }
+
+  void addKeys(String key){
+    keys.add(key);
+  }
+
+  void dispose(){
+    keys.clear();
   }
 }

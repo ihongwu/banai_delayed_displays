@@ -28,7 +28,11 @@ const BanaiDelayedDisplays(
 
 ## Super simple to use
 ```
+
+final BanaiDelayedDisplaysController _banaiDelayedDisplaysController = BanaiDelayedDisplaysController();
+
 DelayedDisplays(
+	banaiDelayedDisplaysController: _banaiDelayedDisplaysController,
 	from: const Offset(-0.35, 0.35),
 	delay: const Duration(milliseconds: 300),
 	duration: const Duration(milliseconds: 500),
@@ -40,6 +44,13 @@ DelayedDisplays(
 	),
 ),
 ```
+
+
+@override
+void dispose() {
+	super.dispose();
+	_banaiDelayedDisplaysController.dispose();
+}
 
 
 ## Getting Started

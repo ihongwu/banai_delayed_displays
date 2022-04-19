@@ -1,0 +1,4 @@
+{
+	"editor.suggest.showConstants": true,
+	"dart.closingLabels": true
+}

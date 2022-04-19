@@ -45,12 +45,13 @@ DelayedDisplays(
 ),
 ```
 
-
+```
 @override
 void dispose() {
 	super.dispose();
 	_banaiDelayedDisplaysController.dispose();
 }
+```
 
 
 ## Getting Started
